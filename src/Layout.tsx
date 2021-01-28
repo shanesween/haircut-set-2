@@ -1,10 +1,10 @@
 import { Box, makeStyles } from '@material-ui/core'
 import React from 'react'
 import Particles from 'react-tsparticles'
-import Copyright from './Copyright'
-import NavBar from './NavBar'
-import ProTip from './ProTip'
-import particlesConfig from '../Config/particlesConfig'
+import Copyright from './Components/Copyright'
+import NavBar from './Components/NavBar'
+import ProTip from './Components/ProTip'
+import particlesConfig from './Config/particlesConfig'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,8 +19,6 @@ const Layout = (props) => {
     <Box className={classes.root}>
       <NavBar />
       <div>{props.children}</div>
-      <Copyright />
-      <ProTip />
     </Box>
   )
 }

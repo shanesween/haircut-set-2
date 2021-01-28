@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import {
   makeStyles,
   Theme,
@@ -22,6 +22,7 @@ import AssignmentInd from '@material-ui/icons/AssignmentInd'
 import Home from '@material-ui/icons/Home'
 import Apps from '@material-ui/icons/Apps'
 import ContactMail from '@material-ui/icons/ContactMail'
+import Link from '../Link'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -55,6 +56,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   divider: {
     backgroundColor: theme.palette.secondary.main,
   },
+  linkContainer: {
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
 }))
 
 const menuItems = [
@@ -66,17 +72,17 @@ const menuItems = [
   {
     listIcon: <AssignmentInd fontSize="large" />,
     listText: 'Resume',
-    listPath: '/',
+    listPath: '/about',
   },
   {
     listIcon: <Apps fontSize="large" />,
     listText: 'Projects',
-    listPath: '/',
+    listPath: '/about',
   },
   {
     listIcon: <ContactMail fontSize="large" />,
     listText: 'Contact',
-    listPath: '/',
+    listPath: '/about',
   },
 ]
 
@@ -90,20 +96,19 @@ const NavBar = () => {
       <Divider className={classes.divider} />
       <List>
         {menuItems.map((item, i) => (
-          <ListItem
-            button
-            key={i}
-            onClick={() => setOpen(false)}
-            href={item.listPath}
-          >
-            <ListItemIcon className={classes.listItem}>
-              {item.listIcon}
-            </ListItemIcon>
-            <ListItemText
-              className={classes.listItem}
-              primary={item.listText}
-            />
-          </ListItem>
+          <Fragment key={item.listText}>
+            <Link href={item.listPath} className={classes.linkContainer}>
+              <ListItem button key={i} onClick={() => setOpen(false)}>
+                <ListItemIcon className={classes.listItem}>
+                  {item.listIcon}
+                </ListItemIcon>
+                <ListItemText
+                  className={classes.listItem}
+                  primary={item.listText}
+                />
+              </ListItem>
+            </Link>
+          </Fragment>
         ))}
       </List>
     </Box>
