@@ -50,17 +50,19 @@ const images = [
 ]
 
 const icons = [
-  { name: 'HTML5', url: '/dev/html5.svg' },
   { name: 'JavaScript', url: '/dev/js.svg' },
   { name: 'TypeScript', url: '/dev/typescript.svg' },
-  { name: 'Nodejs', url: '/dev/nodejs.svg' },
   { name: 'React', url: '/dev/react.svg' },
   { name: 'Redux', url: '/dev/redux.svg' },
-  { name: 'Material-UI', url: '/dev/materialui.svg' },
-  { name: 'Firebase', url: '/dev/firebase.svg' },
-  { name: 'MS SQL Server', url: '/dev/microsoftsqlserver.svg' },
-  { name: 'PostgreSQL', url: '/dev/postgresql.svg' },
+  { name: 'Nodejs', url: '/dev/nodejs.svg' },
+  { name: 'Express', url: '/dev/express.svg' },
   { name: 'Sequelize', url: '/dev/sequelize.svg' },
+  { name: 'PostgreSQL', url: '/dev/postgresql.svg' },
+  { name: 'MS SQL Server', url: '/dev/microsoftsqlserver.svg' },
+  { name: 'Firebase', url: '/dev/firebase.svg' },
+  { name: 'HTML5', url: '/dev/html5.svg' },
+  { name: 'Material-UI', url: '/dev/materialui.svg' },
+  { name: 'Bootstrap', url: '/dev/bootstrap.svg' },
 ]
 
 const About = () => {
@@ -82,9 +84,9 @@ const About = () => {
   return (
     <Container className={classes.root}>
       <Grid container spacing={3}>
-        {/* <Grid item xs={12}>
+        <Grid item xs={12}>
           <Paper className={classes.paper}>Get To Know Me</Paper>
-        </Grid> */}
+        </Grid>
         <Grid item container xs={12}>
           <Paper className={classes.paper}>
             <Grid container item xs direction="row">
