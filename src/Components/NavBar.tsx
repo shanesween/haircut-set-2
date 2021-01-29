@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   menuSliderContainer: {
     width: 250,
-    background: '#511',
+    background: theme.palette.primary.main,
     height: '100%',
   },
   avatar: {
@@ -70,19 +70,19 @@ const menuItems = [
     listPath: '/',
   },
   {
-    listIcon: <AssignmentInd fontSize="large" />,
-    listText: 'Resume',
-    listPath: '/about',
-  },
-  {
     listIcon: <Apps fontSize="large" />,
     listText: 'Projects',
-    listPath: '/about',
+    listPath: '/projects',
   },
   {
     listIcon: <ContactMail fontSize="large" />,
-    listText: 'Contact',
+    listText: 'About',
     listPath: '/about',
+  },
+  {
+    listIcon: <AssignmentInd fontSize="large" />,
+    listText: 'Resume',
+    listPath: '/resume',
   },
 ]
 

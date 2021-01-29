@@ -4,7 +4,7 @@ import { theme } from '../Material/theme'
 const particlesConfig = {
     background: {
         color: {
-            value: theme.palette.background.default,
+            value: theme.palette.background.default
         },
     },
     fpsLimit: 60,
@@ -39,10 +39,10 @@ const particlesConfig = {
     },
     particles: {
         color: {
-            value: theme.palette.secondary.main,
+            value: theme.palette.primary.main,
         },
         links: {
-            color: theme.palette.primary.main,
+            color: theme.palette.secondary.main,
             distance: 150,
             enable: true,
             opacity: 0.5,

@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
       width: theme.spacing(15),
       height: theme.spacing(15),
       margin: theme.spacing(1),
+      '& .MuiAvatar-img': {
+        objectFit: 'contain',
+      },
     },
     title: {
       color: theme.palette.primary.main,

@@ -8,7 +8,7 @@ export const getAppTheme = (mode: PaletteType = 'light'): Theme => {
     const themeConfig = {
         palette: {
             primary: {
-                main: '#A63446',
+                main: '#823329',
             },
             secondary: {
                 main: '#A7B4A9',
@@ -17,8 +17,7 @@ export const getAppTheme = (mode: PaletteType = 'light'): Theme => {
                 main: red.A400,
             },
             background: {
-                default: '#FBFEF9',
-                black: '1B1F22'
+                default: '#343536',
             },
         },
     };
