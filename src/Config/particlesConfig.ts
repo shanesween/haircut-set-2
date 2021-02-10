@@ -4,7 +4,7 @@ import { theme } from '../Material/theme'
 const particlesConfig = {
     background: {
         color: {
-            value: theme.palette.background.default
+            value: theme.palette.background.paper
         },
     },
     fpsLimit: 60,

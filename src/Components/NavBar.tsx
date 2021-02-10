@@ -16,8 +16,8 @@ import {
   ListItemText,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import InstagramIcon from '@material-ui/icons/Instagram'
 import AssignmentInd from '@material-ui/icons/AssignmentInd'
 import Home from '@material-ui/icons/Home'
 import Apps from '@material-ui/icons/Apps'
@@ -126,24 +126,26 @@ const NavBar = () => {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Typography variant="h6" className={classes.title}></Typography>
+          <Typography variant="h6" className={classes.title}>
+            DJ TOLO
+          </Typography>
           <IconButton
             edge="start"
             className={classes.menuButton}
             aria-label="github"
             target={'_blank'}
-            href="https://github.com/shanesween"
+            href="https://twitter.com/cacc___"
           >
-            <GitHubIcon fontSize="large" />
+            <TwitterIcon fontSize="large" />
           </IconButton>
           <IconButton
             edge="start"
             className={classes.menuButton}
             aria-label="linkedIn"
             target={'_blank'}
-            href="https://www.linkedin.com/in/shanesween/"
+            href="https://instagram.com/cacc___"
           >
-            <LinkedInIcon fontSize="large" />
+            <InstagramIcon fontSize="large" />
           </IconButton>
         </Toolbar>
       </AppBar>

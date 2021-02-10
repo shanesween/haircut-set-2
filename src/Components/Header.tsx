@@ -1,66 +1,74 @@
 import React from 'react'
 import {
   makeStyles,
-  Theme,
-  createStyles,
-  Avatar,
-  Box,
-  Grid,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
   Typography,
+  Grid,
 } from '@material-ui/core'
-import Typed from 'react-typed'
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    avatar: {
-      width: theme.spacing(15),
-      height: theme.spacing(15),
-      margin: theme.spacing(1),
-      '& .MuiAvatar-img': {
-        objectFit: 'contain',
-      },
-    },
-    title: {
-      color: theme.palette.primary.main,
-    },
-    subtitle: {
-      color: theme.palette.secondary.main,
-      textTransform: 'uppercase',
-    },
-    typedContainer: {
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%,-50%)',
-      textAlign: 'center',
-      zIndex: 1,
-    },
-  }),
-)
+const useStyles = makeStyles({
+  root: {},
+})
+
 const Header = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.typedContainer}>
-      <Grid container justify="center">
-        <Avatar className={classes.avatar} src="/beard.png" alt="avatar" />
+    <Grid container direction="row" justify="space-around" alignItems="center">
+      <Grid container item xs={4} spacing={3}>
+        <Grid item xs={12}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="140"
+                image="/haircut-logo.png"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
       </Grid>
-      <Typography className={classes.title} variant="h4">
-        <Typed strings={['Shane Sweeney']} typeSpeed={40} />
-      </Typography>
-      <Typography className={classes.subtitle} variant="h5">
-        <Typed
-          strings={[
-            'Frontend Developer',
-            'Native App Developer',
-            'Burrito Enthusiast',
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
-      </Typography>
-    </Box>
+      <Grid container item xs={4} spacing={3}>
+        <Grid item xs={12}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="140"
+                image="/haircut-logo.png"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 

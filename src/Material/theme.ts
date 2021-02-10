@@ -8,10 +8,10 @@ export const getAppTheme = (mode: PaletteType = 'light'): Theme => {
     const themeConfig = {
         palette: {
             primary: {
-                main: '#823329',
+                main: '#351b54',
             },
             secondary: {
-                main: '#A7B4A9',
+                main: '#ff4f87',
             },
             error: {
                 main: red.A400,
